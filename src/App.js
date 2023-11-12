@@ -82,7 +82,7 @@ class App extends Component {
     // for the Face Detect Mode: https://www.clarifai.com/models/face-detection
     // If that isn't working, then that means you will have to wait until their servers are back up. 
 
-    fetch('http://localhost:3000/imageurl', {
+    fetch('https://face-recognition-brain-api-4znl.onrender.com/imageurl', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -100,7 +100,7 @@ class App extends Component {
       .then((result) => {
         const parsedResult = JSON.parse(result);
         if (result) {
-          fetch('http://localhost:3000/image', {
+          fetch('https://face-recognition-brain-api-4znl.onrender.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
